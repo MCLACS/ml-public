@@ -2,6 +2,9 @@
 # This file is used to explore the structure and values
 # of the sample iris datafile included with sklearn
 # ------------------------------------------------------
+import sys
+sys.path.append('/home/ubuntu/workspace/utils')
+
 import mglearn as mglearn
 import pandas as pd
 import numpy as np
