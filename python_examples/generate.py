@@ -3,7 +3,7 @@ import random
 zips = ('01247', '11001', '02048', '01201', '08701', '01237')
 lows = (-4, 45)
 highs = (46, 72)
-lines = 500
+lines = 100
 pairs = 5
 
 def generate(filename):
