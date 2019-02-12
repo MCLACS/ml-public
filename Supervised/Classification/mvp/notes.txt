@@ -1,0 +1,17 @@
+Phase 1
+* Create a file called clean.py that cleans the data as follows:
+    clean up Name
+    get rid of heading row
+    get rid of rows with empty value for BA, OBP, SLG
+    get rid of all columns except PA, HR, RBI, BA, OBP, SLG
+    remove MVP column
+    save MVP column to a new file called mvp_y.csv
+    save Name column to a new file called names.csv
+    save rest in file called mvp_X.csv
+
+Phase 2
+* create an examine_data.py
+* create a train_test_predict.py file that uses KNearest to predict
+
+How did the algorithm do?
+Experiment with different values of K and see what happens to youyr score
