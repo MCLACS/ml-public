@@ -28,7 +28,7 @@ def main():
             ba = tokens[i['ba']].strip()
             obp = tokens[i['obp']].strip()
             slg = tokens[i['slg']].strip()
-            if ba != '' and obp != '' and slg != '':
+            if ba != '' or obp != '' or slg != '':
                 name = cleanName(tokens[i['name']].strip())
                 pa = tokens[i['pa']].strip()
                 hr = tokens[i['hr']].strip()

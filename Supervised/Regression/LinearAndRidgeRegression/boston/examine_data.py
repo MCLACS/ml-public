@@ -16,7 +16,7 @@ from sklearn.model_selection import train_test_split
 # median value of homes in several Boston neighborhoods in the 1970s,
 # using information such as crime rate, proximity
 # to the Charles River, highway accessibility, and so on. The dataset
-# contains 506 data points, described by 13 features: 
+# contains 506 data points, described over 100 features: 
 
 # load_extended_boston() returns two values, a two dimensional NumPy array
 # that contains the x-values, and a one dimensional NumPy 
