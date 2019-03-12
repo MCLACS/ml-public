@@ -12,19 +12,12 @@ import matplotlib.pyplot as plt
 from sklearn.datasets import load_breast_cancer
 from sklearn.model_selection import train_test_split
 
-cancer = load_breast_cancer() 
+X = np.loadtxt('mvp_X.csv',skiprows=0, unpack=False, delimiter=',')
+y = np.loadtxt('mvp_y.csv',skiprows=0, unpack=False, delimiter=',')
 
-print('Keys:\n{}'.format(cancer.keys())) 
-print('Targets:\n{}'.format(cancer['target_names'])) 
-print('Features:\n{}'.format(cancer['feature_names'])) 
-print('Shape of data:\n{}'.format(cancer['data'].shape)) 
-print('First 5 rows of data:\n{}'.format(cancer['data'][:5])) 
-print('Shape of targets:\n{}'.format(cancer['target'].shape)) 
-print('Targets:\n{}'.format(cancer['target'])) 
-
-
+print(X);
 # split the data into a training sert and a testing set
-X_train , X_test , y_train , y_test = train_test_split(cancer.data, cancer.target, stratify=cancer.target, random_state=42) 
+X_train , X_test , y_train , y_test = train_test_split(X, y, stratify=y, random_state=42) 
 print('X_train shape: {}'.format(X_train.shape))
 print('y_train shape: {}'.format(y_train.shape))
 print('X_test shape: {}'.format(X_test.shape))
