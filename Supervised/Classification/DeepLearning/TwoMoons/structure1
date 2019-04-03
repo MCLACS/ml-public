@@ -1,0 +1,23 @@
+digraph {
+	graph [rankdir=LR splines=line]
+	node [fixedsize=True shape=circle]
+	subgraph cluster_0 {
+		node [shape=circle]
+		"x[0]" [labelloc=c]
+		"x[1]" [labelloc=c]
+		"x[2]" [labelloc=c]
+		"x[3]" [labelloc=c]
+	label = "inputs"
+	color = "white"
+	}
+	subgraph cluster_2 {
+		node [shape=circle]
+	label = "output"
+	color = "white"
+		y
+	}
+	"x[0]" -> y [label="w[0]"]
+	"x[1]" -> y [label="w[1]"]
+	"x[2]" -> y [label="w[2]"]
+	"x[3]" -> y [label="w[3]"]
+}
