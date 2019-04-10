@@ -7,12 +7,6 @@ import mglearn as mglearn
 from IPython.display import display
 import pydot 
 
-# mglearn.plots.plot_logistic_regression_graph()
-# mglearn.plots.plot_single_hidden_layer_graph()
-# mglearn.plots.plot_two_hidden_layer_graph()
-# plt.savefig(r"structure.png")
-
-
 dot = mglearn.plots.plot_logistic_regression_graph()
 dot.format = 'png'
 dot.render(filename='structure1');  

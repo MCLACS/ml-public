@@ -12,7 +12,7 @@ X, y = make_moons()
 X_train, X_test, y_train, y_test = train_test_split(X, y, random_state = 3)
 
 print('Training...')
-mlp = MLPClassifier(solver = 'lbfgs' , random_state = 42, hidden_layer_sizes = [ 10 ], activation = 'relu') #tanh 
+mlp = MLPClassifier(solver = 'lbfgs' , random_state = 42, hidden_layer_sizes = [ 10 ], activation = 'tanh') #tanh 
 mlp.fit( X_train , y_train ) 
 
 print('Testing...')

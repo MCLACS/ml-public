@@ -19,13 +19,13 @@ cancer = load_breast_cancer()
 X = cancer.data
 y = cancer.target
 
-# scaler = MinMaxScaler() 
-# X = scaler.fit_transform(X) 
+scaler = MinMaxScaler() 
+X = scaler.fit_transform(X) 
 
 X_train, X_test, y_train, y_test = train_test_split(X, y, random_state = 8)
 
 print('Training...')
-mlp = MLPClassifier(solver = 'lbfgs' , random_state = 42, hidden_layer_sizes = [ 10 ], activation = 'relu') #tanh 
+mlp = MLPClassifier(solver = 'lbfgs' , random_state = 42, hidden_layer_sizes = [ 10, 10 ], activation = 'tanh') #tanh 
 mlp.fit( X_train , y_train ) 
 
 print('Testing...')
