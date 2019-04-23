@@ -30,27 +30,32 @@ display(data_dummies.head())
 # loc[row, colum] where row and columns can be slices that are inclusive
 
 # for example, first three rows, all columns from age to occupation_ Transport-moving
-features = data_dummies.loc[0:2, 'age' : 'occupation_ Transport-moving'] 
+# features = data_dummies.loc[0:2, 'age' : 'occupation_ Transport-moving'] 
+# display(features)
+
+# # or all rows, all columns from age to occupation_ Transport-moving
+features = data_dummies.loc[:, 'age' : 'occupation_ Transport-moving'] 
 display(features)
 
-# or all rows, all columns from age to occupation_ Transport-moving
-features = data_dummies.loc[:, 'age' : 'occupation_ Transport-moving'] 
-
-# Extract NumPy arrays 
+# # Extract NumPy arrays 
 X = features.values
 y = data_dummies[ 'income_ >50K' ].values 
-print ( "X.shape: {} y.shape: {}" . format ( X . shape , y . shape )) 
+print ( "X.shape: {} y.shape: {}".format ( X.shape , y.shape )) 
 
-# Logistic Regression is used when the dependent variable(target) is categorical.
-# It is a simple form of classification.
-# For example,
-# To predict whether an email is spam (1) or (0)
-# To predict whether someone will make less than 50k (0) or more than 50k (1)
+# # Logistic Regression is used when the dependent variable(target) is categorical.
+# # It is a simple form of classification.
+# # For example,
+# # To predict whether an email is spam (1) or (0)
+# # To predict whether someone will make less than 50k (0) or more than 50k (1)
 
 X_train,X_test,y_train,y_test = train_test_split(X,y,random_state=0)
 logreg=LogisticRegression(solver='lbfgs')
 logreg.fit(X_train,y_train)
 print("Testscore: {:.2f}".format(logreg.score(X_test,y_test)))
+print(logreg.coef_[0])
+
+x = data_dummies.loc[:, 0 : 6] 
+print(X)
 
 
 
