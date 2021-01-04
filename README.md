@@ -1,1 +1,1 @@
-Public repostiory for MCLA Machine Learning Class
+Public repository for MCLA Machine Learning Class
