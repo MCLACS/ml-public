@@ -36,6 +36,7 @@ X_new_sample = np.array([[freq]])
 y_classification = lr.predict(X_new_sample)
 print('Prediction: %s->%s' % (X_new_sample[0], y_classification[0]))
 
+# plot the line...
 plt.scatter(x, y)
 plt.xlabel('Chirp Freq')
 plt.ylabel('Temp')
