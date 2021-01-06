@@ -1,5 +1,0 @@
-Tom, 21
-Sally, 18
-Steve, 20
-Jane, 19
-SKip, 22

@@ -1,6 +1,0 @@
-
-GRE Score,TOEFL Score,University Rating,SOP,LOR ,CGPA,Research,Chance Of Admit
-
-Class 0 = 117
-Class 1 = 209
-Class 2 = 74
