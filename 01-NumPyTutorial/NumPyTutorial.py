@@ -62,9 +62,13 @@ print("a*b = \n%s\n" % c)
 print("a = \n%s\n" % a)
 print("a[2,0] = %s\n" % a[2,0])
 
-# slicing
 print("a = \n%s\n" % a)
 
-print("a[0:5, 1] = %s\n" % a[0:5, 1])
+# slicing
+print("a[0:3, 1] = %s\n" % a[0:3, 1])
+print("a[:, 1] = %s\n" % a[:, 1])
 print("a[2,0:3] = %s\n" % a[2,0:3])
+print("a[2,:] = %s\n" % a[2,:])
 print("a[0:2,0:3] = \n%s\n" % a[0:2,0:3])
+print("a[0:2,:] = \n%s\n" % a[0:2,:])
+print("a[0:2,1:3] = \n%s\n" % a[0:2,1:3])
