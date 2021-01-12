@@ -1,12 +1,9 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-# CRICK-X.csv
-# Columns: Chirp Freq
-# CRICK-Y.csv
-# Columns: Temp F
-x = np.loadtxt('CRICK-X.csv',skiprows=1, unpack=False, delimiter=',')
-y = np.loadtxt('CRICK-Y.csv',skiprows=1, unpack=False, delimiter=',')
+all = np.loadtxt('CRICK.csv',skiprows=1, unpack=False, delimiter=',')
+x = all[:, 0]
+y = all[:, 1]
 
 print('x shape: %s' % str(x.shape))
 print('y shape: %s' % str(y.shape))
