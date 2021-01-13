@@ -24,10 +24,13 @@ X = f.listTo2DNumPy(x)
 
 # create the train and test sets for X and y
 # traning has 75% of the rows and test has 25% of the rows...
-X_train = X[0:int(X.size*0.75), :]
-X_test = X[int(X.size*0.75):, :]
-y_train = y[0:int(y.size*0.75)]
-y_test = y[int(y.size*0.75):]
+train_size = int(X.shape[0]*0.75)
+test_size=int(X.shape[0]-train_size)
+
+X_train = X[0:train_size, :]
+X_test = X[train_size:, :]
+y_train = y[0:train_size]
+y_test = y[train_size:]
 
 print('Entire set shape= %s' % str(X.shape))
 print('Training set shape= %s' % str(X_train.shape))
@@ -41,7 +44,7 @@ print( "Excel score linear: %.2f" % 0.9609)
 print('\nTraining results...')
 # train the regression algorithm...
 lr = LinearRegression().fit(X_train , y_train)
-print("lr.coef_: %f" % lr.coef_)
+print("lr.coef_: %s" % lr.coef_)
 print("lr.intercept_: %f" % lr.intercept_)
 print( "Training set score linear: %.2f" % lr.score( X_train , y_train))
 
