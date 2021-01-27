@@ -1,9 +1,5 @@
-import sys
-sys.path.append('../../modules')
-
 import numpy as np
 import matplotlib.pyplot as plt
-import functions as f
 from sklearn.linear_model import LinearRegression
 
 all = np.loadtxt('CRICK.csv',skiprows=1, unpack=False, delimiter=',')
@@ -18,9 +14,12 @@ y = all[:, 1]
 
 # in this example there is only one feature
 # but the linear regression algorithm still wants
-# X to be a 2D numpy array, so we convert it here,
+# X to be a 2D numpy array, so we convert it here
 # this is not necessary if X has more than one feature...
-X = f.listTo2DNumPy(x)
+X = []
+for n in x:
+    X.append([n])
+X = np.array(X)
 
 # create the train and test sets for X and y
 # traning has 75% of the rows and test has 25% of the rows...
