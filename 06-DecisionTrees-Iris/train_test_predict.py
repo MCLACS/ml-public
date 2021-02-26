@@ -17,7 +17,7 @@ print("Labels %s" % labelNames)
 
 # create the train and test sets for X and y
 # traning has 67% of the rows and test has 33% of the rows...
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.33)
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.33, random_state = 12)
 
 # print shape of data sets...
 print('Entire set shape= %s' % str(X.shape))
@@ -26,7 +26,7 @@ print('Test set shape= %s' % str(X_test.shape))
 
 # train the decision tree algorithm...
 print('Training...')
-tree2 = tree.DecisionTreeClassifier(max_depth = 2)
+tree2 = tree.DecisionTreeClassifier(max_depth = 10, random_state = 32)
 tree2.fit (X_train, y_train)
 
 # test it...

@@ -18,5 +18,5 @@ print('X shape: %s' % str(X.shape))
 print('y shape: %s' % str(y.shape))
 
 # print data...
-print('first five rows of x= \n%s' % X[0:6, :])
+print('first five rows of X= \n%s' % X[0:6, :])
 print('first 150 rows of y= \n%s' % y[0:150])
