@@ -74,4 +74,4 @@ y_values = [lr.intercept_ + lr.coef_*x.min(), lr.intercept_ + lr.coef_*x.max()]
 plt.plot(x_values, y_values , marker = 'o', color='red')
 
 # show the plot
-plt.show()
+plt.savefig('crickets2.png')

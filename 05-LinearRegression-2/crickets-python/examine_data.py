@@ -1,3 +1,6 @@
+import os    
+os.environ['MPLCONFIGDIR'] = "./matplot-temp"
+
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -22,4 +25,4 @@ plt.ylabel('Temp')
 plt.title('Crickets Chirp vs. Temp')
 plt.xlim(left=0)
 plt.ylim(bottom=0)
-plt.show()
+plt.savefig('crickets.png')
